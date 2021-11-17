@@ -11,7 +11,7 @@ The directory structure of this repository is as follows:
 - `build/` &mdash; Intermediate object files of the example application
 (generated during the compilation)
 - `include/edjx/` &mdash; C++ edjLibrary SDK (headers)
-- `lib/edjx/` &mdash; C++ edjLibrary SDK (static library)
+- `lib/` &mdash; C++ edjLibrary SDK (static library)
 - `src/` &mdash; Source code of the example application
 
 ## Install WASI C++ SDK
@@ -28,7 +28,7 @@ A recent version of the Clang compiler is needed to compile a WASM target.
 ## Compile the Example Application
 
 The C++ edjLibrary SDK is already located in `include/edjx/` and
-`lib/edjx/`. To compile the example application, run
+`lib/`. To compile the example application, run
 
     make all
 
