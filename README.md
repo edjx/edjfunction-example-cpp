@@ -19,11 +19,15 @@ The directory structure of this repository is as follows:
 WASI SDK ([github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk))
 provides the necessary C and C++ standard library functions. Install the
 WASI SDK to `/opt/wasi-sdk/` (so that the path to the bundled compiler is
-`/opt/wasi-sdk/bin/clang++`). It is possible to install the WASI SDK to
+`/opt/wasi-sdk/bin/clang++`). Use the same WASI SDK version that was used
+to build the `libedjx.a` library.
+
+It is possible to install the WASI SDK to
 a different location and then manually update the `WASI_SDK_PATH` variable in
 the Makefile. It is also possible to specify a different compiler than
 the one provided by the WASI SDK by editing the `CC` variable in the Makefile.
-A recent version of the Clang compiler is needed to compile a WASM target.
+However, to avoid any compatibility issues, we recommend using the clang
+compiler that comes bundled with the WASI SDK.
 
 ## Compile the Example Application
 
