@@ -3,7 +3,7 @@ WASI_SDK_PATH := /opt/wasi-sdk
 
 # Paths to headers and SDK library
 INCLUDE_DIR := ./include
-EDJLIB_DIR := ./lib/edjx
+LIB_DIR := ./lib
 
 # Directories used by the project
 SRC_DIR := src/
@@ -42,7 +42,7 @@ $(BUILD_DIR):
 	$(MKDIR_P) $@
 
 $(TARGET_DIR)/$(TARGET): $(SRC:%.cpp=$(BUILD_DIR)/%.o)
-	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -L$(EDJLIB_DIR) -o $@ $^ $(CLIBS)
+	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -L$(LIB_DIR) -o $@ $^ $(CLIBS)
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CC) $(CPPFLAGS) $(CFLAGS) -I$(INCLUDE_DIR) -c -o $@ $<
