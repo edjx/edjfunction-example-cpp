@@ -1,0 +1,4 @@
+[submodule "edjx-cpp-sdk"]
+	path = edjx-cpp-sdk
+	url = https://github.com/edjx/edjx-cpp-sdk.git
+	branch = wasi-12
