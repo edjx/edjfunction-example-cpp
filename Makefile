@@ -18,7 +18,7 @@ SRC := $(notdir $(wildcard $(SRC_DIR)/*.cpp))
 
 # Compiler options
 CC := $(WASI_SDK_PATH)/bin/clang++
-CFLAGS := --target=wasm32-wasi --sysroot=$(WASI_SDK_PATH)/share/wasi-sysroot/ -Wall -Werror -O2 -fno-exceptions -static -flto
+CFLAGS := --target=wasm32-wasi --sysroot=$(WASI_SDK_PATH)/share/wasi-sysroot/ -Wall -Werror -O2 -fno-exceptions -static
 CLIBS := -ledjx
 CPPFLAGS += -MD -MP
 
